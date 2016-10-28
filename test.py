@@ -3,9 +3,9 @@
 import sys
 import argparse
 
-init_test = __import__("__init__", {})
+#init_test = __import__("__init__", {})
 
-parser = argparse.ArgumentParser(description="process some integers.")
+parser = argparse.ArgumentParser(description="process some integers")
 
 parser.add_argument('integers', metavar='N', type=int, nargs='+',
                     help='an integer for the accumulator')
@@ -24,6 +24,7 @@ if __name__ == "__main__":
     #output_args(args)
 
     args = parser.parse_args()
+    output_args(args)
     print args.accumulate(args.integers)
 
 
